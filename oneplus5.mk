@@ -19,6 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Enable GPSU
+$(call inherit-product, vendor/google-customization/config.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/oneplus/oneplus5/oneplus5-vendor.mk)
 
