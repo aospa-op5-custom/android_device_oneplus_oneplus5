@@ -63,6 +63,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/keylayout/gf_input.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gf_input.kl \
     $(LOCAL_PATH)/rootdir/keylayout/synaptics.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/synaptics.kl
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_msm8998
