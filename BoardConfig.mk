@@ -23,7 +23,7 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 
 # Asserts
-TARGET_BOARD_INFO_FILE := $(COMMON_PATH)/board-info.txt
+# TARGET_BOARD_INFO_FILE := $(COMMON_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := OnePlus5,oneplus5,cheeseburger,OnePlus5T,oneplus5t,dumpling
 
 # Architecture
@@ -46,9 +46,6 @@ TARGET_USES_UEFI := true
 # Camera
 USE_CAMERA_STUB := false
 BOARD_QTI_CAMERA_32BIT_ONLY := true
-
-# Disk Encryption
-TARGET_HW_DISK_ENCRYPTION := true
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
