@@ -126,6 +126,11 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     wfd-legacy
 
+# RIL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-lite
+
 # tri-state-key
 #PRODUCT_PACKAGES += \
 #    TriStateHandler \
