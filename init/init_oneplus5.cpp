@@ -77,6 +77,9 @@ void vendor_load_properties()
 	property_override("ro.system.build.fingerprint", "google/coral/coral:11/RP1A.200720.009/6720564:user/release-keys");
 	property_override_dual("ro.vendor.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:11/RP1A.200720.009/6720564:user/release-keys");
 
+        // Adb Secure
+        property_override("ro.adb.secure", "0");
+
 	// Common Properties
 	// Dalvik
 	property_override_dual("dalvik.vm.heapstartsize", "dalvik.vm.heapstartsize", "16m");
