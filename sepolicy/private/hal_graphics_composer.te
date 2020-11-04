@@ -1,1 +1,0 @@
-allow hal_graphics_composer sysfs:file { open read getattr };

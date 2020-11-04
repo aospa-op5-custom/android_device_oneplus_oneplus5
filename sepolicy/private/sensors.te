@@ -1,4 +1,0 @@
-type sensors, domain;
-type sensors_exec, exec_type, vendor_file_type, file_type;
-
-allow sensors sysfs:dir { read open };
