@@ -46,7 +46,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.usbconfigfs=true androidboot.usbcontroller=a800000.dwc3 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
+TARGET_KERNEL_APPEND_DTB := true
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
@@ -55,9 +55,10 @@ BOARD_ROOT_EXTRA_SYMLINKS := /vendor/bt_firmware:/bt_firmware /vendor/dsp:/dsp /
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
-TARGET_KERNEL_CONFIG := paranoid_defconfig
+KERNEL_DEFCONFIG := paranoid_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_VERSION := 4.4
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
@@ -120,7 +121,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # Power
@@ -135,7 +135,6 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 # Treble
 BOARD_VNDK_VERSION := current
-PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_SEPOLICY_SPLIT := true
 
 # inherit from the proprietary version

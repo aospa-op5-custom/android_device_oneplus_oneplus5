@@ -127,9 +127,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd-legacy
 
 # tri-state-key
-PRODUCT_PACKAGES += \
-    TriStateHandler \
-    tri-state-key_daemon
+#PRODUCT_PACKAGES += \
+#    TriStateHandler \
+#    tri-state-key_daemon
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
